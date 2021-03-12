@@ -1,0 +1,59 @@
+<!-- Preloader - animacion de carga - spinners.css -->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label">SIOM</p>
+    </div>
+</div>
+
+<section id="wrapper">
+    <div class="login">
+        <div class="login-box card">
+            <div class="card-body">
+                <form class="form-horizontal form-material" id="loginform" action="index.html">
+                    <div align="center"><img [src]="var_ruta_logo" width="150" /></div>
+
+                    <div class="form-group" style="text-align: center; margin: 10px 0px auto 0px;">
+                        <mat-form-field style="width: 100%;">
+                            <mat-label>País</mat-label>
+                            <mat-select [(ngModel)]="var_ruta_logo" name="info_pais" required>
+                                <mat-option *ngFor="let info_pais of paises" [id]="info_pais.id" [value]="info_pais.ruta_logo">
+                                    {{info_pais.nombre}} <img style="float: right;
+                                        margin-top: 9px;" [src]="info_pais.ruta_icon" width="30" />
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="text" required="" placeholder="Usuario">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="password" required="" placeholder="Contraseña">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-12">
+                            <div class="checkbox checkbox-info pull-left p-t-0">
+                                <input id="checkbox-recuperar-pass" type="checkbox" class="filled-in chk-col-light-blue">
+                                <label for="checkbox-recuperar-pass">Recuerdame</label>
+                            </div>
+                            <a href="" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Recuperar Contraseña</a>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <div class="col-xs-12">
+                            <button type="button" class="btn btn-info btn-lg btn-block w-100">Iniciar Sesión</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-sm-12 text-center" style="font-size:x-small;"><strong>D. Red/ G. Gestion de Redes y Servicios/ SG. Operación de Red</strong></p>
+                        <div align="center"><img src="../assets/imagenes/logos/logo-telefonica.png" width="80" /></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

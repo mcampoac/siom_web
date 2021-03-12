@@ -1,0 +1,14 @@
+.recover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    padding: 8% 0;
+    position: fixed;
+}
+
+.recover-box {
+    width: 400px;
+    margin: 0 auto;
+}

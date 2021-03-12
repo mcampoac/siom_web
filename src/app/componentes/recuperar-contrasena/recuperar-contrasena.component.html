@@ -1,0 +1,51 @@
+<!-- Preloader - animacion de carga - spinners.css -->
+<div class="preloader">
+    <div class="loader">
+        <div class="loader__figure"></div>
+        <p class="loader__label">SIOM</p>
+    </div>
+</div>
+
+<section id="wrapper">
+    <div class="recover">
+        <div class="recover-box card">
+            <div class="card-body">
+                <form class="form-horizontal form-material" id="recoverform" action="index.html">
+                    <div align="center">
+                        <img id="imagenlogo" *ngFor="let paislogo of paiseslogo" src="{{paislogo.ruta}}" width="150" />
+                    </div>
+
+                    <div class="form-group" style="margin: 10px 0px 10px 0px;">
+                        <label>País</label>
+                        <select class="form-select" [(ngModel)]="seleccionarPais" (change)="onSelect($event.target.value)" (change)="onSelectlogo($event.target.value)" name="pais">
+                            <option *ngFor="let pais of paises" value="{{pais.id}}">
+                                {{pais.nombre}}
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="form-group ">
+                        <div class="col-xs-12">
+                            <input *ngFor="let identificador of identificadores" value="{{identificador.id}}" class="form-control" type="text" required placeholder="{{identificador.identificador}}">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-12">
+                            <input class="form-control" type="email" required placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <div class="col-xs-12">
+                            <button class="btn btn-block btn-lg btn-primary w-100" type="submit">Recuperar Contraseña</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <p class="col-sm-12 text-center" style="font-size:x-small;"><strong>D. Red/ G. Gestion de Redes y Servicios/ SG. Operación de Red</strong></p>
+                        <div align="center"><img src="../assets/imagenes/logos/logo-telefonica.png" width="80" /></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

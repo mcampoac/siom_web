@@ -1,0 +1,14 @@
+.login {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    padding: 7% 0;
+    position: fixed;
+}
+
+.login-box {
+    width: 400px;
+    margin: 0 auto;
+}
